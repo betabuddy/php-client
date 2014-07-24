@@ -1,5 +1,17 @@
 {
     "name": "betabuddy/api-client",
+	"type": "library",
+	"description": "PHP client library for the [BetaBuddy API](http://betabuddy.co).",
+	"keywords": ["BetaBuddy", "Private", "Beta", "Invitation"],
+	"homepage": "https://github.com/betabuddy/php-client",
+	"license": "MIT",
+	"authors": [
+	{
+	  "name": "BetaBuddy",
+	  "email": "coders@betabuddy.co",
+	  "homepage": "http://betabuddy.co"
+	}
+	],
     "autoload": {
         "psr-0" : {
             "BetaBuddy\\ApiClient" : "src"
