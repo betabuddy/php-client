@@ -13,8 +13,8 @@
 	}
 	],
     "autoload": {
-        "psr-0" : {
-            "BetaBuddy\\ApiClient" : "src/ApiClient"
+        "psr-4" : {
+            "BetaBuddy\\ApiClient\\" : "src/"
         }
     }
 }
