@@ -1,0 +1,8 @@
+{
+    "name": "betabuddy/api-client",
+    "autoload": {
+        "psr-0" : {
+            "BetaBuddy\\ApiClient" : "src"
+        }
+    }
+}

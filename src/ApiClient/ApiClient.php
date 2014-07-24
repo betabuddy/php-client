@@ -1,6 +1,6 @@
 <?php
 
-namespace BetaBuddy;
+namespace BetaBuddy\ApiClient;
 
 /**
  * BetaBuddy Api Client Sample
