@@ -1,8 +1,8 @@
 {
     "name": "betabuddy/api-client",
 	"type": "library",
-	"description": "PHP client library for the [BetaBuddy API](http://betabuddy.co).",
-	"keywords": ["BetaBuddy", "Private", "Beta", "Invitation"],
+	"description": "PHP client library for the BetaBuddy.co API. (http://betabuddy.co)",
+	"keywords": ["BetaBuddy", "private", "beta", "invitation", "launch"],
 	"homepage": "https://github.com/betabuddy/php-client",
 	"license": "MIT",
 	"authors": [
