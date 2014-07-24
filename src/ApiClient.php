@@ -90,7 +90,7 @@ class ApiClient
     
     private function executePostRequest($endpoint, array $postdata)
     {
-        $curl = getCurlHandle($endpoint);
+        $curl = $this->getCurlHandle($endpoint);
         
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
@@ -103,7 +103,7 @@ class ApiClient
 
     private function executeGetRequest($endpoint)
     {
-        $curl = getCurlHandle($endpoint);
+        $curl = $this->getCurlHandle($endpoint);
         
         $curl_response = curl_exec($curl);
         curl_close($curl);
