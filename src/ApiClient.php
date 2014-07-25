@@ -7,10 +7,10 @@ namespace BetaBuddy\ApiClient;
  */
 class ApiClient
 {
-    private $apiUrl;
-    private $betaId;
-    private $secret;
-    private $hashingAlgorithm = 'sha1';
+    protected $apiUrl;
+    protected $betaId;
+    protected $secret;
+    protected $hashingAlgorithm = 'sha1';
 
     /**
      * Constructor
@@ -88,7 +88,7 @@ class ApiClient
     }
         
     
-    private function executePostRequest($endpoint, array $postdata)
+    protected function executePostRequest($endpoint, array $postdata)
     {
         $curl = $this->getCurlHandle($endpoint);
         
@@ -101,7 +101,7 @@ class ApiClient
         return $curl_response;
     }    
 
-    private function executeGetRequest($endpoint)
+    protected function executeGetRequest($endpoint)
     {
         $curl = $this->getCurlHandle($endpoint);
         
@@ -111,7 +111,7 @@ class ApiClient
         return $curl_response;
     } 
 
-    private function getCurlHandle($endpoint)
+    protected function getCurlHandle($endpoint)
     {
         $timestamp = microtime(true);
         $url = $this->buildUrl($endpoint, $timestamp );
@@ -128,7 +128,7 @@ class ApiClient
         return $curl;
     }    
     
-    private function getCustomHeaderArray($url, $timestamp)
+    protected function getCustomHeaderArray($url, $timestamp)
     {
         $hash = $this->getHash($url);
         return array(
@@ -137,12 +137,12 @@ class ApiClient
                 );
     }
         
-    private function buildUrl($endpoint, $timestamp)
+    protected function buildUrl($endpoint, $timestamp)
     {
         return $this->apiUrl.'/api/'.$this->betaId.'/'.$timestamp.$endpoint;
     }
 
-    private function getHash($url)
+    protected function getHash($url)
     {
         return hash_hmac($this->hashingAlgorithm, $url, $this->secret);
     }
