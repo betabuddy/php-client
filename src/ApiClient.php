@@ -33,10 +33,10 @@ class ApiClient
      * @param string $moniker Something to uniquely identify the user, usually an email address.
      * @return type
      */
-    public function SignupUser($moniker)
+    public function SignupUser($moniker, $mailer_id = null)
     {
         $endpoint = '/user/signup';
-        $postdata = array("moniker" => $moniker);
+        $postdata = array("moniker" => $moniker, "mailer_id" => $mailer_id);
         return $this->executePostRequest($endpoint, $postdata);
     }
     
